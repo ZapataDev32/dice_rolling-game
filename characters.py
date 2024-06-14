@@ -13,7 +13,7 @@ class Character:
     def take_damage(self, damage, defense=0):
         net_damage = max(damage - defense, 0) #ensuring damage cannot go negative
         self.health -= net_damage
-        # self.health = max(self.health, 0)
+        self.health = max(self.health, 0)
         return net_damage
 
     def __str__(self):
