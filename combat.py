@@ -14,9 +14,16 @@ def attack(attacker, defender, num_dice):
     print(dice_face_diagram)  # Displaying the dice art
     time.sleep(1.5)
 
-    print(f"Total damage: {damage}")
-    time.sleep(1)
-    defender.take_damage(damage)
+    # print(f"Total damage: {damage}")
+    # time.sleep(1)
+    # defender.take_damage(damage)
 
-    print(f"{defender.name} takes {damage} damage! {defender.name} has {defender.health} health remaining.\n")
+    total_defense = defender.defend()  # Defender rolls for defense
+    actual_damage = defender.take_damage(damage, total_defense)
+
+    print(f"Total damage: {damage}, reduced by defense to {actual_damage}")
+    print(f"{defender.name} has {defender.health} health remaining.\n")
     time.sleep(1.5)
+
+    # print(f"{defender.name} takes {damage} damage! {defender.name} has {defender.health} health remaining.\n")
+    # time.sleep(1.5)
