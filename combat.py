@@ -1,4 +1,6 @@
 # combat.py
+import time
+
 from dice import roll_dice, generate_dice_faces_diagram
 from characters import Character  
 
@@ -8,8 +10,13 @@ def attack(attacker, defender, num_dice):
     damage = sum(roll_results)
 
     print(f"{attacker.name} prepares to attack {defender.name}!")
+    time.sleep(1)
     print(dice_face_diagram)  # Displaying the dice art
-    print(f"Total damage: {damage}")
+    time.sleep(1.5)
 
+    print(f"Total damage: {damage}")
+    time.sleep(1)
     defender.take_damage(damage)
+
     print(f"{defender.name} takes {damage} damage! {defender.name} has {defender.health} health remaining.\n")
+    time.sleep(1.5)
