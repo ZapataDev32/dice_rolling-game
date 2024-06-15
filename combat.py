@@ -13,6 +13,13 @@ def attack(attacker, defender, num_dice, prepped_defense=0):
     print(dice_face_diagram)
     time.sleep(1.5)
     
+    if 6 in roll_results:
+        damage = sum(roll_results) * 2
+        print("Lucky hit! Damage is doubled.")
+    else:
+        damage = sum(roll_results)
+
+
     net_damage = defender.take_damage(damage, prepped_defense)
     if prepped_defense > 0:
         print(f"Total damage: {damage}, reduced by defense to {net_damage}")
