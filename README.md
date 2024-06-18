@@ -24,4 +24,6 @@ To run the game, follow these steps:
 2. **Navigate to the directory** where the game script is located using a terminal or command prompt.
 3. **Execute the game script** by typing the appropriate command in the terminal.
 
-` python game.py`
+```Bash
+python game.py
+```
