@@ -3,5 +3,6 @@
     <img src="img/Dice_Monsters-Logo.png">
 </p>
 
-#Dice Monsters
+# Dice Monsters
+
 Welcome to Dice Monsters! a terminal based Dice-Roll Conbat. Where you battle a monster, and roll a dice to determine how much damage you will do to the beast, but be warned, the monster gets to roll as well!?
